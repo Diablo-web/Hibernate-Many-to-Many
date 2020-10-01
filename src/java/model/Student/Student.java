@@ -20,6 +20,7 @@ public class Student {
     int studentid;
     @Column
     String studentname;
+    String studentemail;
     //Look in Coures class
     @ManyToMany(fetch = FetchType.EAGER)
     List<Course> courses;
@@ -39,6 +40,15 @@ public class Student {
     public void setStudentname(String studentname) {
         this.studentname = studentname;
     }
+    
+    public String getStudentemail() {
+         return studenteamil;
+    }
+    
+    public void setStudentemail(String studentemail) {
+        this.studentemail = studentemail;
+    }
+    
 
     public List<Course> getCourses() {
         return courses;
